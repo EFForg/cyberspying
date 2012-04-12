@@ -1,3 +1,99 @@
 body {
 background-color: black;
+color: white;
+font-family: helvetica;
+background-image: url('/images/ceiling_cat.png');
+background-repeat: no-repeat;
+background-position: top left;
+}
+#wrapper {
+width: 960px;
+margin: 0 auto;
+}
+header {
+text-transform: uppercase;
+text-align: center;
+margin-bottom: 20px;
+}
+header h1 {
+margin: 0;
+font-size: 70px;
+color: #57e54c;
+}
+header p {
+margin: 0;
+font-size: 30px;
+color: #62c25b;
+}
+content {
+float: left;
+width: 690px;
+margin-right: 20px;
+line-height: 150%;
+}
+p.call-to-action {
+font-size: 1.5em;
+line-height: 150%;
+}
+#lookup-wrapper {
+text-align: center;
+}
+#zip-wrapper {
+position: relative;
+display: inline-block;
+}
+label#zip-label {
+position: absolute;
+top: -5px;
+right: 5px;
+font-size: 10px;
+color: #666666;
+display: none;
+}
+input#zip {
+font-size: 25px;
+width: 140px;
+padding: 10px 20px;
+border: 1px solid #666666;
+text-align: center;
+color: #000000;
+font-weight: bold;
+}
+input#zip.empty {
+color: #666666;
+font-weight: normal;
+}
+input#lookup {
+background-color: #226622;
+color: #ffffff;
+font-weight: bold;
+font-size: 25px;
+padding: 10px;
+border: 1px solid #669966;
+border-radius: 15px;
+margin-left: 10px;
+cursor: pointer;
+}
+#lookup-loading {
+color: #e5e34c;
+font-weight: bold;
+border: 1px solid #333333;
+border-radius: 3px;
+padding: 5px 10px;
+margin: 10px;
+font-size: 1.5em;
+display: none;
+}
+#lookup-loading img {
+vertical-align: middle;
+}
+aside {
+float: left;
+width: 250px;
+}
+a {
+color: #57e54c;
+}
+#step-tweet {
+display: none;
 }
