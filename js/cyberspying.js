@@ -43,8 +43,15 @@ $(function(){
                 // build the tweet step page
                 var $reps_html = $('<div id="reps-html"></div>');
                 $.each(data.reps, function(key, rep){
+                    if(rep.legislator.chamber != 'house') return;
                     $rep = $('<div class="rep"></div>')
                         .append('<p>'+rep.legislator.title+' '+rep.legislator.firstname+' '+rep.legislator.lastname+'</p>');
+                    if(rep.legislator.twitter_id == '') {
+                        $rep.append('<p>This representative doesn\'t have a Twitter account.</p>');
+                    } else {
+                        $rep.append('<p><a href="https://twitter.com/'+rep.legislator.twitter_id+'">@'+rep.legislator.twitter_id+'</p>');
+                    }
+                        //.append('<p>'+JSON.stringify(rep.legislator)+'</p>');
                     $reps_html.append($rep);
                 });
                 $('#step-tweet').html($reps_html);

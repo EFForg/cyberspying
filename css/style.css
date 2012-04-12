@@ -90,10 +90,17 @@ vertical-align: middle;
 aside {
 float: left;
 width: 250px;
+margin-bottom: 50px;
 }
 a {
 color: #57e54c;
 }
+.cleared {
+clear:both;
+}
 #step-tweet {
 display: none;
+}
+#cispa-graphic {
+text-align: center;
 }
