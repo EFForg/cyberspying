@@ -3,19 +3,19 @@ new TWTR.Widget({
   type: 'search',
   search: '#CISPA',
   interval: 30000,
-  title: 'What people are saying:',
-  subject: '',
-  width: 250,
+  title: 'It\'s a double rainbow',
+  subject: 'Across the sky',
+  width: 220,
   height: 300,
   theme: {
     shell: {
-      background: '#62c25b',
-      color: '#ffffff'
+      background: '#df342d',
+      color: '#eae2df'
     },
     tweets: {
-      background: '#ffffff',
+      background: '#eae2df',
       color: '#444444',
-      links: '#1985b5'
+      links: '#df332d'
     }
   },
   features: {
@@ -23,6 +23,10 @@ new TWTR.Widget({
     loop: true,
     live: true,
     behavior: 'default'
+  },
+  // stretch out the twitter badge
+  ready: function(){
+    var height = $(window).height()-120;
+    $('.twtr-timeline').css('height', height+'px')
   }
 }).render().start();
-

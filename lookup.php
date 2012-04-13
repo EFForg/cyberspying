@@ -29,8 +29,19 @@ if(empty($reps->response->legislators)) {
     )));
 }
 
+// craft the data to only return representatives, limited info
+$house_reps = array();
+foreach($reps->response->legislators as $rep) {
+    if($rep->legislator->chamber == 'house') {
+        $house_reps[] = array(
+            'name' => $rep->legislator->title." ".$rep->legislator->firstname." ".$rep->legislator->lastname,
+            'twitter_id' => $rep->legislator->twitter_id
+        );
+    }
+}
+
 // all seems good, return the data
 die(json_encode(array(
     'error' => false,
-    'reps' => $reps->response->legislators
+    'reps' => $house_reps //$reps->response->legislators
 )));

@@ -4,44 +4,56 @@
         <title>Stop Cyber Spying</title>
         <link rel="stylesheet" href="/css/style.css" />
         <script src="/js/jquery-1.7.2.min.js"></script>
+        <script src="/js/char_count.js"></script>
         <script src="/js/cyberspying.js"></script>
     </head>
 
     <body>
         <div id="wrapper">
-            <header>
+            <div id="header">
                 <h1>Stop Cyber Spying</h1>
                 <p>A week of action against #CISPA</p>
-            </header>
+            </div>
 
-            <content>
+            <noscript>Total respect of course, but JavaScript is required for this action to work.</noscript>
+            <div id="content">
                 <div id="step-lookup">
-                    <p class="call-to-action">The Cyber Intelligence Sharing and Protection Act, or CISPA, is a really bad law. It would really, honestly, suck if it got passed. Seriously. You should totally oppose it. Tweet your representatives in Congress why!</p>
+                    <p class="call-to-action">CISPA - the Cyber Intelligence Sharing &amp; Protection Act - would give companies a loophole through all existing privacy laws to suck up data on everyday Internet users and share it with the government. We can't let that happen.</p>
+
                     <div id="lookup-wrapper">
-                        <form id="lookup-form">
-                        <p>Look up your representatives in Congress:</p>
-                        <div id="zip-wrapper">
-                            <label for="zip" id="zip-label">ZIP Code</label>
-                            <input type="text" id="zip" />
-                        </div>
-                        <input type="submit" value="FIND MY REPS" id="lookup" />
-                        </form>
                         <div id="lookup-loading">
                             Commencing Congressional Twitter Handle Detection
                             <img src="/images/loading.gif" /> 
                         </div>
-                        <p><a href="#">Outside the United States?</a></p>
+                        <form id="lookup-form">
+                        <p><strong>Use our interactive tool to Tweet at your Representatives in Congress. Show them all the unnecessary personal info this cyber spying bill will collect on everyday Internet users.</strong></p>
+                        <div id="zip-wrapper">
+                            <label for="zip" id="zip-label">ZIP Code</label>
+                            <input type="text" id="zip" />
+                        </div>
+                        <input type="submit" value="Find My Representatives on Twitter" id="lookup" />
+                        </form>
+                        <p><a id="no-zip-code">I don't have a US zip code</a> &nbsp; <a href="#">I'm not on Twitter</a></p>
+
                     </div>
                 </div>
                 <div id="step-tweet">
-                    
+                    <div id="tweet-title">Congressional Twitter Handle Detection Complete</div>
+                    <div id="tweet-body-wrapper">
+                        <p>What do you do online that's none of the government's business? <small>ie "I participate in online political forums"</small></p>
+                        <p><input id="tweet-body" /></p>
+                        <p><a id="suggest-a-tweet">Suggest a Tweet for me</a></p>
+                    </div>
+                    <div class="cleared"></div>
+                    <div id="reps"></div>
+                    <div class="centered"><a id="back-to-lookup">Look up a different ZIP code</a></div>
                 </div>
-            </content>
+            </div>
 
-            <aside>
+            <div id="twitter-badge">
                 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
                 <script src="/js/twitter_search.js"> </script>
-            </aside>
+            </div>
             
             <div id="cispa-graphic" class="cleared">
                 <img src="/images/cispa.jpg" />
