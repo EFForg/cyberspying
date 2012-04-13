@@ -2,6 +2,7 @@ body {
 background-color: black;
 color: white;
 font-family: helvetica;
+margin: 0;
 }
 noscript {
 font-size: 25px;
@@ -14,31 +15,24 @@ text-align: center;
 #wrapper {
 width: 720px;
 margin: 0 auto;
+background-image: url('/images/background.jpg');
+color: black;
 }
 #header {
-text-transform: uppercase;
-text-align: center;
 margin-bottom: 20px;
 }
-#header h1 {
-margin: 0;
-font-size: 60px;
-color: #57e54c;
-}
-#header p {
-margin: 0;
-font-size: 30px;
-color: #62c25b;
-}
 #content {
-width: 720px;
-margin-right: 20px;
-line-height: 150%;
-background-color: #000000;
+width: 640px;
+padding: 0 40px;
+line-height: 120%;
+}
+#lookup-form {
+margin-bottom: 20px;
 }
 p.call-to-action {
 font-size: 1.2em;
-line-height: 150%;
+line-height: 120%;
+font-weight: bold;
 }
 #zip-wrapper {
 position: relative;
@@ -46,7 +40,7 @@ display: inline-block;
 }
 label#zip-label {
 position: absolute;
-top: -5px;
+top: 0px;
 right: 5px;
 font-size: 10px;
 color: #666666;
@@ -55,26 +49,39 @@ display: none;
 input#zip {
 font-size: 25px;
 width: 140px;
-padding: 10px 20px;
-border: 1px solid #666666;
-text-align: center;
+padding: 10px;
+border: 0;
+text-align: left;
 color: #000000;
 font-weight: bold;
+display: inline-block;
+vertical-align: middle;
 }
 input#zip.empty {
 color: #666666;
 font-weight: normal;
 }
 input#lookup {
-background-color: #226622;
 color: #ffffff;
 font-weight: bold;
-font-size: 25px;
-padding: 10px;
-border: 1px solid #669966;
-border-radius: 3px;
-margin-left: 10px;
+font-size: 20px;
+margin-left: 20px;
 cursor: pointer;
+display: inline-block;
+width: 166px;
+height: 39px;
+background-image: url('/images/lookup.jpg');
+border: 0;
+vertical-align: middle;
+}
+#lookup-links {
+display: inline-block;
+width: 230px;
+margin-left: 20px;
+vertical-align: middle;
+}
+#lookup-links p {
+margin: 0;
 }
 #lookup-loading {
 color: #e5e34c;
@@ -97,7 +104,7 @@ right: 10px;
 z-index: -10;
 }
 a {
-color: #57e54c;
+color: #3f3b39;
 cursor: pointer;
 text-decoration: underline;
 }
@@ -106,6 +113,9 @@ text-align: center;
 }
 .cleared {
 clear:both;
+}
+.hidden {
+display: none;
 }
 #tweet-body-wrapper {
 position: relative;
@@ -116,7 +126,7 @@ margin-bottom: 20px;
 margin: 0;
 }
 #tweet-body {
-width: 600px;
+width: 500px;
 padding: 8px;
 background-color: #ffffff;
 color: #333333;
@@ -165,7 +175,7 @@ background-color: #333333;
 border: 1px solid #666666;
 }
 form.tweet .twitter-status {
-width: 580px;
+width: 500px;
 color: #f0f0f0;
 font-family: helvetica;
 display: inline-block;
@@ -198,7 +208,8 @@ display: inline-block;
 margin-left: 10px;
 font-weight: bold;
 font-size: 20px;
-color: #aaaaaa;
+color: #000000;
+text-shadow: 1pt 1px 0pt #938277;
 }
 span.counter.exceeded {
 color: #ff6666;
