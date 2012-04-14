@@ -191,4 +191,9 @@ $(function(){
     $('#twitter-opt-in').click(function(){
         $('#twitter-badge').html('<iframe src="/badge.html"></iframe>');
     });
+
+    // done
+    $('#done').click(function(){
+        document.location = 'https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444';
+    });
 });
