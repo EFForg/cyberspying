@@ -1,5 +1,5 @@
 <?php
-$sunlight_api_key = "api_key_wiped";
+require_once('config.php');
 
 // validate zip code
 $zip = $_GET['zip'];
