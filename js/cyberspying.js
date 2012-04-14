@@ -104,6 +104,8 @@ $(function(){
             $rep = $('<div class="rep"></div>');
             if(rep.twitter_id != '') {
                 $rep.append(build_tweet(rep.twitter_id, agency));
+            } else {
+                $rep.append('<p><strong>'+rep.name+'</strong> isn\'t on Twitter</p>');
             }
             $reps_html.append($rep);
         });
