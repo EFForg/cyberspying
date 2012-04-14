@@ -174,16 +174,17 @@ font-weight: bold;
 #step-tweet {
 display: none;
 }
-#step-tweet #tweet-instead {
-color: #aa0000;
+#step-tweet #tweet-instead, #step-tweet #tweet-no-zip {
+color: #661111;
 font-weight: bold;
+font-style: italic;
 display: none;
 }
 #step-tweet .rep-name {
 margin: 0;
 }
 #step-tweet #tweet-title {
-color: #aa0000;
+color: #000000;
 font-weight: bold;
 font-size: 1.5em;
 text-align: center;

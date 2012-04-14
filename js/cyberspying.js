@@ -1,5 +1,5 @@
 $(function(){
-    var default_twitter_id = 'micahflee';
+    var default_twitter_id = 'HouseIntelComm';
 
     // initialize zip code
     $('input#zip')
@@ -164,12 +164,14 @@ $(function(){
     // I don't have a US zip code
     $('#no-zip-code').click(function(){
         build_tweet_page([{twitter_id:default_twitter_id,name:''}]);
+        $('#tweet-no-zip').show();
     });
 
     // look up a different zip code
     $('#back-to-lookup').click(function(){
         $('span.counter').remove();
         $('#tweet-instead').hide();
+        $('#tweet-no-zip').hide();
         $('#lookup-form').show(200);
         $('#lookup-loading').hide();
         $('#step-tweet').hide(200);
