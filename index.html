@@ -4,6 +4,7 @@
         <title>Stop Cyber Spying</title>
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/widget.css" />
         <script src="/js/jquery-1.7.2.min.js"></script>
         <script src="/js/char_count.js"></script>
         <script src="/js/cyberspying.js"></script>
@@ -20,7 +21,7 @@
             <noscript>Total respect of course, but JavaScript is required for this action to work.</noscript>
             <div id="content">
                 <div id="step-lookup">
-                    <p class="call-to-action">CISPA - the Cyber Intelligence Sharing &amp; Protection Act - would give companies a loophole through all existing privacy laws to suck up data on everyday Internet users and share it with the government. We can't let that happen.</p>
+                    <p class="call-to-action">CISPA &mdash; the Cyber Intelligence Sharing &amp; Protection Act &mdash; would give companies a loophole through all existing privacy laws to suck up data on everyday Internet users and share it with the government. We can't let that happen.</p>
 
                     <div id="lookup-wrapper">
                         <div id="lookup-loading">
@@ -29,40 +30,57 @@
                         </div>
                         <form id="lookup-form">
                         <p>Use our interactive tool to Tweet at your Representatives in Congress. Show them all the unnecessary personal info this cyber spying bill will collect on everyday Internet users.</p>
-                        <div id="zip-wrapper">
-                            <label for="zip" id="zip-label">ZIP Code</label>
-                            <input type="text" id="zip" />
-                        </div>
-                        <input type="submit" value="FIND MY REPS" id="lookup" />
-                        <div id="lookup-links">
-                            <p><a id="no-zip-code">I don't have a US zip code</a></p>
-                            <p><a href="#">I'm not on Twitter</a></p>
+                        <div class="centered">
+                            <div id="zip-wrapper">
+                                <label for="zip" id="zip-label">ZIP Code</label>
+                                <input type="text" id="zip" />
+                            </div>
+                            <input type="submit" value="FIND MY REPS" id="lookup" />
+                            <div id="lookup-links">
+                                <p><a id="no-zip-code">I don't have a US zip code</a></p>
+                                <p><a href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444">I'm not on Twitter</a></p>
+                            </div>
                         </div>
                         </form>
                     </div>
                 </div>
-                <div id="step-tweet">
+                <div id="step-tweet" class="centered">
                     <div id="tweet-title">Congressional Twitter Handle Detection Complete</div>
+                    <p id="tweet-instead">None of your representatives are using Twitter. Tweet to the committee instead.</p>
                     <div id="tweet-body-wrapper">
-                        <p>What do you do online that's none of the government's business?<br/><small>i.e. "I participate in online political forums"</small></p>
+                        <p><strong>What do you do online that's none of the government's business?</strong><br/><small>i.e. "I participate in online political forums"</small></p>
                         <p><input id="tweet-body" /></p>
-                        <p><a id="suggest-a-tweet">Suggest a Tweet for me</a></p>
+                        <p id="tweet-links">
+                            <a id="suggest-a-tweet"><strong>Suggest a Tweet for me</strong></a>
+                            <a id="back-to-lookup">Look up a different ZIP code</a>
+                            <a href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444">I'm not on Twitter</a>
+                        </p>
                     </div>
                     <div class="cleared"></div>
-                    <div id="reps"></div>
-                    <div class="centered"><a id="back-to-lookup">Look up a different ZIP code</a></div>
+                    <div id="reps" class="centered"></div>
                 </div>
             </div>
 
             <div id="twitter-badge">
-                <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-                <script src="/js/twitter_search.js"> </script>
+                <div id="twitter-opt-in" class="twtr-widget">
+                    <div style="width: 230px;" class="twtr-doc"><div class="twtr-hd"><h4>Live Tweets from the Campaign Against CISPA</h4></div><div class="twtr-bd"><div class="twtr-timeline"><div class="twtr-tweets"><div class="twtr-reference-tweet"></div><div id="tweet-id-1" class="twtr-tweet"><div class="twtr-tweet-wrap" style="background-color:#eae2df;">
+                        <p id="twitter-opt-in-show">Click here to show me the Tweets!</p>
+                        <p id="twitter-opt-in-details">You'll get some data from Twitter (like a cookie) and Twitter will get some data from you (like the fact  that you saw these tweets).</p>
+                    </div></div></div></div></div><div class="twtr-ft"><p>&nbsp;</p></div></div>
+                </div>
             </div>
-            
+
             <div id="cispa-graphic" class="cleared">
+                <p>Infographic courtesy of <a target="_blank" href="http://luminconsulting.com/">Lumin Consulting</a>.</p>
                 <img src="/images/cispa.jpg" />
             </div>
+
         </div>
+        
+        <div id="logos"></div>
+        
+        <p class="centered">Special thanks to Patrick Steele, activist intern, for his assistance in this campaign</p>
+            
         <noscript><img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;action_name=Stop Cyber Spying" style="border:0" alt="" /></noscript>
         <div id="anon-stats"></div><script>var r;if(document.referrer==''){r=''}else{var s=document.referrer.split('/');r=s[0]+'//'+s[2]+'/';}document.getElementById('anon-stats').innerHTML = '<img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;urlref='+r+'&amp;action_name=Stop Cyber Spying" style="border:0" alt="" />';</script>
     </body>

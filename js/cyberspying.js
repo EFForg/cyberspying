@@ -1,4 +1,6 @@
 $(function(){
+    var default_twitter_id = 'micahflee';
+
     // initialize zip code
     $('input#zip')
         .val('ZIP Code').addClass('empty')
@@ -65,7 +67,9 @@ $(function(){
         'I use Tor to protect my privacy',
         'I read about the history of anarchism',
         'I log into my OkCupid account and search for love',
-        'I donate to EFF'
+        'I donate to EFF',
+        'what books I checked out from my local library',
+        'I read all kinds of blogs online at my local library'
     ];
     function random_suggestion() {
         $('#tweet-body')
@@ -77,10 +81,53 @@ $(function(){
         random_suggestion();
     });
 
+    // build the tweet page
+    function build_tweet_page(reps) {
+        var $reps_html = $('<div id="reps-html"></div>');
+        
+        // count how many reps have twitter_ids
+        var twitter_id_count = 0;
+        $.each(reps, function(key, rep) {
+            if(rep.twitter_id != '') twitter_id_count++;
+        });
+        if(twitter_id_count == 0) {
+            reps.push({twitter_id:default_twitter_id, name:''});
+            $('#tweet-instead').show();
+        }
+
+        // build the tweet step page
+        var agencies = ['FBI', 'CIA', 'NSA', 'military'];
+        var agency = agencies[Math.floor(Math.random()*4)];
+        var longest_twitter_length = 0;
+        $.each(reps, function(key, rep){
+            if(rep.twitter_id.length > longest_twitter_length) longest_twitter_length = rep.twitter_id.length;
+            $rep = $('<div class="rep"></div>');
+            if(rep.twitter_id != '') {
+                $rep.append(build_tweet(rep.twitter_id, agency));
+            }
+            $reps_html.append($rep);
+        });
+
+        // figure out tweet length stuff
+        var length = 140 - '.@ Does the  really need to know ? #CongressTMI Stop #CISPA https://eff.org/r.1X2'.length + agency.length + longest_twitter_length;
+        $('#tweet-body').charCount({ allowed: length });
+
+        // clear out the tweet body
+        $('#tweet-body').val('').change().focus();
+
+        // display the reps
+        $('#step-tweet #reps').html($reps_html);
+        update_status();
+
+        // move to tweet step
+        $('#step-tweet').show(200);
+        $('#step-lookup').hide(200);
+    }
+
     // lookup
     $('#lookup-form').submit(function(){
         $('#lookup-form').hide(200);
-        $('#lookup-loading').css('display', 'inline-block');
+        $('#lookup-loading').show(200);
 
         var error_message = function(msg) {
             alert(msg);
@@ -102,36 +149,7 @@ $(function(){
                     return;
                 }
 
-                // build the tweet step page
-                var agencies = ['FBI', 'CIA', 'NSA', 'military'];
-                var agency = agencies[Math.floor(Math.random()*4)];
-                var longest_twitter_length = 0;
-                var $reps_html = $('<div id="reps-html"></div>');
-                $.each(data.reps, function(key, rep){
-                    if(rep.twitter_id.length > longest_twitter_length) longest_twitter_length = rep.twitter_id.length;
-                    $rep = $('<div class="rep"></div>');
-                    if(rep.twitter_id == '') {
-                        $rep.append('<p><strong>'+rep.name+'</strong> doesn\'t have a Twitter account</p>');
-                    } else {
-                        $rep.append(build_tweet(rep.twitter_id, agency));
-                    }
-                    $reps_html.append($rep);
-                });
-
-                // figure out tweet length stuff
-                var length = 140 - '.@ Does the  really need to know ? #CongressTMI Stop #CISPA https://eff.org/r.1X2'.length + agency.length + longest_twitter_length;
-                $('#tweet-body').charCount({ allowed: length });
-
-                // clear out the tweet body
-                $('#tweet-body').val('').change().focus();
-
-                // display the reps
-                $('#step-tweet #reps').html($reps_html);
-                update_status();
-
-                // move to tweet step
-                $('#step-tweet').show(200);
-                $('#step-lookup').hide(200);
+                build_tweet_page(data.reps);
             },
             error: function(){
                 error_message('Failed to contact our web server. Are you connected to the internet?');
@@ -143,14 +161,34 @@ $(function(){
 
     // I don't have a US zip code
     $('#no-zip-code').click(function(){
+        build_tweet_page([{twitter_id:default_twitter_id,name:''}]);
     });
 
     // look up a different zip code
     $('#back-to-lookup').click(function(){
         $('span.counter').remove();
+        $('#tweet-instead').hide();
         $('#lookup-form').show(200);
         $('#lookup-loading').hide();
         $('#step-tweet').hide(200);
         $('#step-lookup').show(200);
+    });
+
+    // build logos
+    var logos = ['03', '06', '09', '11', '13', '15', '17', '19', '22', '24', '26', '28', '30', '32', '35'];
+    $.each(logos, function(){
+        var logo_id = this;
+        $logo = $('<img src="/images/logos/cispa-1b_'+logo_id+'.jpg">')
+            .hover(function(){
+                $(this).attr('src', '/images/logos/cispa-1-over_'+logo_id+'.jpg');
+            }, function(){
+                $(this).attr('src', '/images/logos/cispa-1b_'+logo_id+'.jpg');
+            });
+        $('#logos').append($logo);
+    });
+
+    // twitter badge opt-in
+    $('#twitter-opt-in').click(function(){
+        $('#twitter-badge').html('<iframe src="/badge.html"></iframe>');
     });
 });

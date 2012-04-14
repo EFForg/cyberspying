@@ -1,12 +1,17 @@
+<style>
+body { margin: 0; padding: 0; }
+</style>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
 new TWTR.Widget({
   version: 2,
   type: 'search',
   search: '#CISPA',
   interval: 30000,
-  title: 'It\'s a double rainbow',
-  subject: 'Across the sky',
-  width: 220,
-  height: 300,
+  title: '',
+  subject: 'Live Tweets from the Campaign Against CISPA',
+  width: 230,
+  height: 400,
   theme: {
     shell: {
       background: '#df342d',
@@ -23,10 +28,6 @@ new TWTR.Widget({
     loop: true,
     live: true,
     behavior: 'default'
-  },
-  // stretch out the twitter badge
-  ready: function(){
-    var height = $(window).height()-120;
-    $('.twtr-timeline').css('height', height+'px')
   }
 }).render().start();
+</script>
