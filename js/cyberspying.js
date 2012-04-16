@@ -69,7 +69,11 @@ $(function(){
         'I log into my OkCupid account and search for love',
         'I donate to EFF',
         'what books I checked out from my local library',
-        'I read all kinds of blogs online at my local library'
+        'I read all kinds of blogs online at my local library',
+        'what RSS feeds I read',
+        'I read BoingBoing on a daily basis',
+        'I always have HackerNews open',
+        'I prefer Zerg over Terran or Protoss'
     ];
     function random_suggestion() {
         // pick a suggestion that's short enough
