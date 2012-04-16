@@ -72,10 +72,15 @@ $(function(){
         'I read all kinds of blogs online at my local library'
     ];
     function random_suggestion() {
-        $('#tweet-body')
-            .val(suggestions[Math.floor(Math.random()*suggestions.length)])
-            .change()
-            .select();
+        // pick a suggestion that's short enough
+        var max_length = $('#tweet-body').data('max_length');
+        var suggestion = suggestions[Math.floor(Math.random()*suggestions.length)];
+        while(suggestion.length > max_length) {
+            suggestion = suggestions[Math.floor(Math.random()*suggestions.length)];
+        }
+
+        // suggest it
+        $('#tweet-body').val(suggestion).change().select();
     }
     $('#suggest-a-tweet').click(function(){
         random_suggestion();
@@ -96,7 +101,7 @@ $(function(){
         }
 
         // build the tweet step page
-        var agencies = ['FBI', 'CIA', 'NSA', 'military'];
+        var agencies = ['FBI', 'CIA', 'NSA'];
         var agency = agencies[Math.floor(Math.random()*4)];
         var longest_twitter_length = 0;
         $.each(reps, function(key, rep){
@@ -111,11 +116,12 @@ $(function(){
         });
 
         // figure out tweet length stuff
-        var length = 140 - '.@ Does the  really need to know ? #CongressTMI Stop #CISPA https://eff.org/r.1X2'.length + agency.length + longest_twitter_length;
+        var length = 140 - '.@ Does the  really need to know ? #CongressTMI Stop #CISPA https://eff.org/r.1X2'.length - agency.length - longest_twitter_length;
+        $('#tweet-body').data('max_length', length);
         $('#tweet-body').charCount({ allowed: length });
 
         // clear out the tweet body
-        $('#tweet-body').val('I participate in online political forums').change().focus();
+        $('#tweet-body').val('I post in online political forums').change().focus();
 
         // display the reps
         $('#step-tweet #reps').html($reps_html);
