@@ -179,7 +179,7 @@ $(function(){
     });
 
     // build logos
-    var logos = ['03', '06', '09', '11', '13', '17', '19', '22', '24', '26', '28', '30', '32', '35'];
+    var logos = ['03', '06', '09', '11', '13', '17', '19', '22', '24', '26', '28', '36', '37', '30', '38', '39', '32', '35'];
     $.each(logos, function(){
         var logo_id = this;
         $logo = $('<img src="/images/logos/cispa-1b_'+logo_id+'.jpg">')
