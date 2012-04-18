@@ -50,7 +50,7 @@ if(
                             <input type="submit" value="FIND MY REPS" id="lookup" />
                             <div id="lookup-links">
                                 <p><a id="no-zip-code">I don't have a US zip code</a></p>
-                                <p><a href="<?php echo($next_url); ?>">I'm not on Twitter</a></p>
+                                <p><a target="_top" href="<?php echo($next_url); ?>">I'm not on Twitter</a></p>
                             </div>
                         </div>
                         </form>
