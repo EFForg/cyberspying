@@ -70,7 +70,7 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
                     <div id="reps" class="centered"></div>
                     <input type="submit" value="I'M DONE TWEETING, NEXT STEP" id="done" />
                 </div>
-                <div id="eff">Brought to you by:<br/><a target="_top" href="https://www.eff.org/">Electronic Frontier Foundation</a></div>
+                <div id="eff">Brought to you by <a target="_top" href="https://www.eff.org/">EFF</a></div>
             </div>
         </div>
     </body>
