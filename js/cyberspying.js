@@ -107,7 +107,7 @@ $(function(){
 
         // build the tweet step page
         var agencies = ['FBI', 'CIA', 'NSA'];
-        var agency = agencies[Math.floor(Math.random()*4)];
+        var agency = agencies[Math.floor(Math.random()*agencies.length)];
         var longest_twitter_length = 0;
         $.each(reps, function(key, rep){
             if(rep.twitter_id.length > longest_twitter_length) longest_twitter_length = rep.twitter_id.length;
@@ -153,6 +153,7 @@ $(function(){
             url: '/lookup.php?zip='+zip,
             type: 'GET',
             dataType: 'json',
+            timeout: 1000,
             success: function(data, textStatus){
                 if(textStatus != 'success') {
                     error_message('Oops, something went wrong! Try again in a couple minutes?');
