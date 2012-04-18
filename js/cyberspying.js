@@ -193,6 +193,10 @@ $(function(){
 
     // done
     $('#done').click(function(){
-        document.location = next_url;
+        if(top) {
+            top.location = next_url;
+        } else {
+            document.location = next_url;
+        }
     });
 });
