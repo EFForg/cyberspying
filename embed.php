@@ -1,8 +1,5 @@
 <?php 
-if(
-    isset($_GET['next_url']) && 
-    !empty($_GET['next_url']) && 
-    preg_match('/^https?:\/\//', $_GET['next_url'])) {
+if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?:\/\//', $_GET['next_url'])) {
     $next_url = $_GET['next_url'];
 } else {
     $next_url = 'https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444';
@@ -73,9 +70,8 @@ if(
                     <div id="reps" class="centered"></div>
                     <input type="submit" value="I'M DONE TWEETING, NEXT STEP" id="done" />
                 </div>
+                <div id="eff">Brought to you by <a target="_top" href="https://www.eff.org/">Electronic Frontier Foundation</a></div>
             </div>
-
-        <noscript><img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;action_name=Embed" style="border:0" alt="" /></noscript>
-        <div id="anon-stats"></div><script>var r;if(document.referrer==''){r=''}else{var s=document.referrer.split('/');r=s[0]+'//'+s[2]+'/';}document.getElementById('anon-stats').innerHTML = '<img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;urlref='+r+'&amp;action_name=Embed" style="border:0" alt="" />';</script>
+        </div>
     </body>
 </html>

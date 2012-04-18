@@ -1,3 +1,12 @@
+body {
+background-color: #d5b9a8;
+}
 #wrapper {
 height: 570px;
+}
+#eff {
+position: absolute;
+right: 10px;
+bottom: 10px;
+font-size: 11px;
 }
