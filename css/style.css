@@ -289,19 +289,3 @@ font-size: 11px;
 #cispa-graphic {
 text-align: center;
 }
-@media (max-width: 1220px) {
-    #twitter-badge { display: none; }
-    #logos { display: none; }
-}
-@media (min-width: 1420px) {
-    #wrapper { width:920px; }
-    #content { width:840px; }
-    #header img { width:920px; }
-    #cispa-graphic img { width:920px; }
-}
-@media (min-width: 1620px) {
-    #wrapper { width:1120px; }
-    #content { width:1040px; }
-    #header img { width:1120px; }
-    #cispa-graphic img { width:1120px; }
-}

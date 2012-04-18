@@ -1,16 +1,24 @@
+<?php 
+if(
+    isset($_GET['next_url']) && 
+    !empty($_GET['next_url']) && 
+    preg_match('/^https?:\/\//', $_GET['next_url'])) {
+    $next_url = $_GET['next_url'];
+} else {
+    $next_url = 'https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444';
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <title>Stop Cyber Spying</title>
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
         <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/media.css" />
-        <link rel="stylesheet" href="/css/widget.css" />
+        <link rel="stylesheet" href="/css/embed.css" />
         <link rel="image_src" href="/images/icon.jpg" />
         <script src="/js/jquery-1.7.2.min.js"></script>
         <script src="/js/char_count.js"></script>
         <script src="/js/cyberspying.js"></script>
-        <script src="/js/sidebars.js"></script>
     </head>
 
     <body>
@@ -22,7 +30,7 @@
             </div>
 
             <noscript>Total respect of course, but JavaScript is required for this action to work.</noscript>
-            <input type="hidden" id="next-url" value="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444" />
+            <input type="hidden" id="next-url" value="<?php echo($next_url); ?>" />
             <div id="content">
                 <div id="step-lookup">
                     <p class="call-to-action">CISPA &mdash; the Cyber Intelligence Sharing &amp; Protection Act &mdash; would cut a loophole in all existing privacy laws allowing the government to suck up data on everyday Internet users. We can't let that happen.</p>
@@ -42,7 +50,7 @@
                             <input type="submit" value="FIND MY REPS" id="lookup" />
                             <div id="lookup-links">
                                 <p><a id="no-zip-code">I don't have a US zip code</a></p>
-                                <p><a href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444">I'm not on Twitter</a></p>
+                                <p><a href="<?php echo($next_url); ?>">I'm not on Twitter</a></p>
                             </div>
                         </div>
                         </form>
@@ -67,27 +75,7 @@
                 </div>
             </div>
 
-            <div id="twitter-badge">
-                <div id="twitter-opt-in" class="twtr-widget">
-                    <div style="width: 230px;" class="twtr-doc"><div class="twtr-hd"><h4>Live Tweets from the Campaign Against CISPA</h4></div><div class="twtr-bd"><div class="twtr-timeline"><div class="twtr-tweets"><div class="twtr-reference-tweet"></div><div id="tweet-id-1" class="twtr-tweet"><div class="twtr-tweet-wrap" style="background-color:#eae2df;">
-                        <p id="twitter-opt-in-show">Click here to show me the Tweets!</p>
-                        <p id="twitter-opt-in-details">You'll get some data from Twitter (like a cookie) and Twitter will get some data from you (like the fact  that you saw these tweets).</p>
-                    </div></div></div></div></div><div class="twtr-ft"><p>&nbsp;</p></div></div>
-                </div>
-            </div>
-
-            <div id="cispa-graphic" class="cleared">
-                <p>Infographic courtesy of <a target="_blank" href="http://luminconsulting.com/">Lumin Consulting</a>.</p>
-                <img src="/images/cispa.jpg" />
-            </div>
-
-        </div>
-        
-        <div id="logos"></div>
-        
-        <p class="centered">Special thanks to <a style="color:#ffff66" href="https://twitter.com/#!/pwsteele">Patrick Steele</a>, EFF activist intern, for his assistance in this campaign</p>
-            
-        <noscript><img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;action_name=Stop Cyber Spying" style="border:0" alt="" /></noscript>
-        <div id="anon-stats"></div><script>var r;if(document.referrer==''){r=''}else{var s=document.referrer.split('/');r=s[0]+'//'+s[2]+'/';}document.getElementById('anon-stats').innerHTML = '<img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;urlref='+r+'&amp;action_name=Stop Cyber Spying" style="border:0" alt="" />';</script>
+        <noscript><img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;action_name=Embed" style="border:0" alt="" /></noscript>
+        <div id="anon-stats"></div><script>var r;if(document.referrer==''){r=''}else{var s=document.referrer.split('/');r=s[0]+'//'+s[2]+'/';}document.getElementById('anon-stats').innerHTML = '<img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;urlref='+r+'&amp;action_name=Embed" style="border:0" alt="" />';</script>
     </body>
 </html>

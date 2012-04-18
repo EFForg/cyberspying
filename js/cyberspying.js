@@ -1,5 +1,6 @@
 $(function(){
     var default_twitter_id = 'HouseIntelComm';
+    var next_url = $('#next-url').val();
 
     // initialize zip code
     $('input#zip')
@@ -150,6 +151,7 @@ $(function(){
         var zip = $('#zip').val();
         $.ajax({
             url: '/lookup.php?zip='+zip,
+            type: 'GET',
             dataType: 'json',
             success: function(data, textStatus){
                 if(textStatus != 'success') {
@@ -188,26 +190,8 @@ $(function(){
         $('#step-lookup').show(200);
     });
 
-    // build logos
-    var logos = ['03', '06', '09', '11', '13', '15', '17', '19', '22', '24', '26', 'OC', '28', '36', 'PPF', '37', '30', '38', '39', '32', '35', 'TestPAC'];
-    $.each(logos, function(){
-        var logo_id = this;
-        $logo = $('<img src="/images/logos/cispa-1b_'+logo_id+'.jpg">')
-            .hover(function(){
-                $(this).attr('src', '/images/logos/cispa-1-over_'+logo_id+'.jpg');
-            }, function(){
-                $(this).attr('src', '/images/logos/cispa-1b_'+logo_id+'.jpg');
-            });
-        $('#logos').append($logo);
-    });
-
-    // twitter badge opt-in
-    $('#twitter-opt-in').click(function(){
-        $('#twitter-badge').html('<iframe src="/badge.html"></iframe>');
-    });
-
     // done
     $('#done').click(function(){
-        document.location = 'https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444';
+        document.location = next_url;
     });
 });
