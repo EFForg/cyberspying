@@ -1,8 +1,10 @@
 body {
 background-color: #d5b9a8;
+background-image: url('/images/background.jpg');
 }
 #wrapper {
 height: 570px;
+background-image: none;
 }
 #eff {
 position: absolute;
