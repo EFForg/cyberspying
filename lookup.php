@@ -29,19 +29,23 @@ if(empty($reps->response->legislators)) {
     )));
 }
 
-// craft the data to only return representatives, limited info
+// craft the data to only return senators, limited info
 $house_reps = array();
+$senators = array();
 foreach($reps->response->legislators as $rep) {
+    $congress_rep = array(
+        'name' => $rep->legislator->title." ".$rep->legislator->firstname." ".$rep->legislator->lastname,
+        'twitter_id' => $rep->legislator->twitter_id
+    );
     if($rep->legislator->chamber == 'house') {
-        $house_reps[] = array(
-            'name' => $rep->legislator->title." ".$rep->legislator->firstname." ".$rep->legislator->lastname,
-            'twitter_id' => $rep->legislator->twitter_id
-        );
+        $house_reps[] = $congress_rep;
+    } else {
+        $senators[] = $congress_rep;
     }
 }
 
 // all seems good, return the data
 die(json_encode(array(
     'error' => false,
-    'reps' => $house_reps //$reps->response->legislators
+    'reps' => $senators
 )));

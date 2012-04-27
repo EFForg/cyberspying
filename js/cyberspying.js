@@ -1,5 +1,5 @@
 $(function(){
-    var default_twitter_id = 'HouseIntelComm';
+    var default_twitter_ids = ['JoeLieberman', 'SenJohnMcCain', 'SenFeinstein', 'SenatorBarb'];
     var next_url = $('#next-url').val();
 
     // initialize zip code
@@ -101,7 +101,9 @@ $(function(){
             if(rep.twitter_id != '') twitter_id_count++;
         });
         if(twitter_id_count == 0) {
-            reps.push({twitter_id:default_twitter_id, name:''});
+            $(default_twitter_ids).each(function(key, twitter_id){
+                reps.push({twitter_id:twitter_id, name:''});
+            });
             $('#tweet-instead').show();
         }
 
@@ -176,7 +178,12 @@ $(function(){
 
     // I don't have a US zip code
     $('#no-zip-code').click(function(){
-        build_tweet_page([{twitter_id:default_twitter_id,name:''}]);
+        var reps = [];
+        $(default_twitter_ids).each(function(key, twitter_id){
+            reps.push({twitter_id:twitter_id, name:''});
+        });
+
+        build_tweet_page(reps);
         $('#tweet-no-zip').show();
     });
 

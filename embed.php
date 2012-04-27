@@ -55,8 +55,8 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
                 </div>
                 <div id="step-tweet" class="centered">
                     <div id="tweet-title">Congressional Twitter Handle Detection Complete</div>
-                    <p id="tweet-instead">Your representative in the House doesn't use Twitter. Express your concerns to the House Intel Committee (<a target="_blank" href="https://twitter.com/#!/HouseIntelComm">@HouseIntelComm</a>).</p>
-                    <p id="tweet-no-zip">Express your concerns to the House Intel Committee (<a target="_blank" href="https://twitter.com/#!/HouseIntelComm">@HouseIntelComm</a>).</p>
+                    <p id="tweet-instead">Your representatives in the Senate don't use Twitter. Express your concerns to Joseph Lieberman (I-CT), John McMain (R-AZ), Dianne Feinstein (D-CA), and Barbara Mikulski (D-MD) who are sponsors of cybersecurity legislation that threatens your privacy.</p>
+                    <p id="tweet-no-zip">Express your concerns to Joseph Lieberman (I-CT), John McMain (R-AZ), Dianne Feinstein (D-CA), and Barbara Mikulski (D-MD) who are sponsors of cybersecurity legislation that threatens your privacy.</p>
                     <div id="tweet-body-wrapper">
                         <p><strong>What do you do online that's none of the government's business?</strong><br/><small>i.e. "I post in online political forums"</small></p>
                         <p><input id="tweet-body" /></p>
