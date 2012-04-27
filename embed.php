@@ -30,7 +30,7 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
             <input type="hidden" id="next-url" value="<?php echo($next_url); ?>" />
             <div id="content">
                 <div id="step-lookup">
-                    <p class="call-to-action">CISPA&mdash;the Cyber Intelligence Sharing&amp;Protection Act&mdash;would cut a loophole in all existing privacy laws allowing the government to suck up data on everyday Internet users. We can't let that happen.</p>
+                    <p class="call-to-action">CISPA&mdash;the Cyber Intelligence Sharing &amp; Protection Act&mdash;would cut a loophole in all existing privacy laws allowing the government to suck up data on everyday Internet users. We can't let that happen.</p>
                     <p><strong>The House of Representatives voted to approve CISPA, but it's not over yet! Urge your Senators to stand up for user privacy and oppose cybersecurity bills.</strong></p>
 
                     <div id="lookup-wrapper">
