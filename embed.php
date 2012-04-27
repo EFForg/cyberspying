@@ -35,7 +35,7 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
 
                     <div id="lookup-wrapper">
                         <div id="lookup-loading">
-                            Commencing Congressional Twitter Handle Detection
+                            Commencing Senatorial Twitter Handle Detection
                             <img src="/images/loading.gif" /> 
                         </div>
                         <form id="lookup-form">
@@ -55,9 +55,9 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
                     </div>
                 </div>
                 <div id="step-tweet" class="centered">
-                    <div id="tweet-title">Congressional Twitter Handle Detection Complete</div>
-                    <p id="tweet-instead">Your representatives in the Senate don't use Twitter. Express your concerns to Joseph Lieberman (I-CT), John McMain (R-AZ), Dianne Feinstein (D-CA), and Barbara Mikulski (D-MD) who are sponsors of cybersecurity legislation that threatens your privacy.</p>
-                    <p id="tweet-no-zip">Express your concerns to Joseph Lieberman (I-CT), John McMain (R-AZ), Dianne Feinstein (D-CA), and Barbara Mikulski (D-MD) who are sponsors of cybersecurity legislation that threatens your privacy.</p>
+                    <div id="tweet-title">Senatorial Twitter Handle Detection Complete</div>
+                    <p id="tweet-instead">Your representatives in the Senate don't use Twitter. Express your concerns to Joseph Lieberman (I-CT), John McMain (R-AZ), Dianne Feinstein (D-CA), and Barbara Mikulski (D-MD)&mdash;sponsors of cybersecurity legislation that threatens your privacy.</p>
+                    <p id="tweet-no-zip">Express your concerns to Joseph Lieberman (I-CT), John McMain (R-AZ), Dianne Feinstein (D-CA), and Barbara Mikulski (D-MD)&mdash;sponsors of cybersecurity legislation that threatens your privacy.</p>
                     <div id="tweet-body-wrapper">
                         <p><strong>What do you do online that's none of the government's business?</strong><br/><small>i.e. "I post in online political forums"</small></p>
                         <p><input id="tweet-body" /></p>
