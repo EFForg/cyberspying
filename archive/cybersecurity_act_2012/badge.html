@@ -1,0 +1,33 @@
+<style>
+body { margin: 0; padding: 0; }
+</style>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#CongressTMI',
+  interval: 30000,
+  title: '',
+  subject: 'Live Tweets from the Campaign Against CISPA',
+  width: 230,
+  height: 400,
+  theme: {
+    shell: {
+      background: '#df342d',
+      color: '#eae2df'
+    },
+    tweets: {
+      background: '#eae2df',
+      color: '#444444',
+      links: '#df332d'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
