@@ -24,8 +24,12 @@ margin-bottom: 20px;
 #header p {
 text-align:center;
 font-weight:bold;
-color: #333333;
 font-size: 1.2em;
+padding: 0 40px;
+}
+#header p .details {
+font-size: 0.8em;
+color: #222222;
 }
 #content, #post-content {
 width: 640px;
