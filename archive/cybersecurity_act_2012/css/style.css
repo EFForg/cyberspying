@@ -21,18 +21,28 @@ color: black;
 #header {
 margin-bottom: 20px;
 }
-#content {
+#header p {
+text-align:center;
+font-weight:bold;
+color: #333333;
+font-size: 1.2em;
+}
+#content, #post-content {
 width: 640px;
 padding: 0 40px;
-line-height: 120%;
+line-height: 130%;
+}
+#content ol#demands li {
+background-color: #ffffff;
+margin: 0 0 .2em 0;
+padding: .4em;
+}
+#content ol#demands li .details {
+font-size: 0.8em;
+color: #222222;
 }
 #lookup-form {
 margin-bottom: 20px;
-}
-p.call-to-action {
-font-size: 1.2em;
-line-height: 120%;
-font-weight: bold;
 }
 #zip-wrapper {
 position: relative;
@@ -283,9 +293,7 @@ background-color: #d6312b;
 border: 0;
 vertical-align: middle;
 }
-#cispa-graphic p {
-font-size: 11px;
-}
-#cispa-graphic {
+#video {
 text-align: center;
+padding: 2em 0;
 }

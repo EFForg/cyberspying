@@ -1,13 +1,13 @@
 $(function(){
     // build logos
-    var logos = [];
+    var logos = ['eff'];
     $.each(logos, function(){
         var logo_id = this;
-        $logo = $('<img src="images/logos/cispa-1b_'+logo_id+'.jpg">')
+        $logo = $('<img src="images/logos/'+logo_id+'.jpg">')
             .hover(function(){
-                $(this).attr('src', 'images/logos/cispa-1-over_'+logo_id+'.jpg');
+                $(this).attr('src', 'images/logos/'+logo_id+'_hover.jpg');
             }, function(){
-                $(this).attr('src', 'images/logos/cispa-1b_'+logo_id+'.jpg');
+                $(this).attr('src', 'images/logos/'+logo_id+'.jpg');
             });
         $('#logos').append($logo);
     });
