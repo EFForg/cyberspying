@@ -1,19 +1,19 @@
 $(function(){
     // build logos
-    var logos = ['03', '06', 'ACLU', '11', '13', '15', '17', '19', '22', '24', '26', 'OC', '28', '36', 'PPF', '37', '30', '38', '39', '32', '35', 'TestPAC'];
+    var logos = ['eff'];
     $.each(logos, function(){
         var logo_id = this;
-        $logo = $('<img src="/images/logos/cispa-1b_'+logo_id+'.jpg">')
+        $logo = $('<img src="images/logos/'+logo_id+'.jpg">')
             .hover(function(){
-                $(this).attr('src', '/images/logos/cispa-1-over_'+logo_id+'.jpg');
+                $(this).attr('src', 'images/logos/'+logo_id+'_hover.jpg');
             }, function(){
-                $(this).attr('src', '/images/logos/cispa-1b_'+logo_id+'.jpg');
+                $(this).attr('src', 'images/logos/'+logo_id+'.jpg');
             });
         $('#logos').append($logo);
     });
 
     // twitter badge opt-in
     $('#twitter-opt-in').click(function(){
-        $('#twitter-badge').html('<iframe src="/badge.html"></iframe>');
+        $('#twitter-badge').html('<iframe src="badge.html"></iframe>');
     });
 });
