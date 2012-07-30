@@ -9,19 +9,19 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
 <html lang="en" dir="ltr">
     <head>
         <title>Stop Cyber Spying</title>
-        <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/embed.css" />
-        <link rel="image_src" href="/images/icon.jpg" />
-        <script src="/js/jquery-1.7.2.min.js"></script>
-        <script src="/js/char_count.js"></script>
-        <script src="/js/cyberspying.js"></script>
+        <link rel="shortcut icon" href="/archive/cispa/images/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link rel="stylesheet" href="/archive/cispa/css/style.css" />
+        <link rel="stylesheet" href="/archive/cispa/css/embed.css" />
+        <link rel="image_src" href="/archive/cispa/images/icon.jpg" />
+        <script src="/archive/cispa/js/jquery-1.7.2.min.js"></script>
+        <script src="/archive/cispa/js/char_count.js"></script>
+        <script src="/archive/cispa/js/cyberspying.js"></script>
     </head>
 
     <body>
         <div id="wrapper">
             <div id="header">
-                <img src="/images/header.jpg" />
+                <img src="/archive/cispa/images/header.jpg" />
                 <h1 class="hidden">Stop Cyber Spying</h1>
                 <p class="hidden">A week of action against #CISPA</p>
             </div>
@@ -36,7 +36,7 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
                     <div id="lookup-wrapper">
                         <div id="lookup-loading">
                             Commencing Senatorial Twitter Handle Detection
-                            <img src="/images/loading.gif" /> 
+                            <img src="/archive/cispa/images/loading.gif" /> 
                         </div>
                         <form id="lookup-form">
                         <p>Use our interactive tool to Tweet at your Representatives in Congress. Show them all the unnecessary personal info this cyber spying bill will collect on everyday Internet users.</p>

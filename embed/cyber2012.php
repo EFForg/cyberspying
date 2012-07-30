@@ -1,28 +1,34 @@
+<?php 
+if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?:\/\//', $_GET['next_url'])) {
+  $next_url = $_GET['next_url'];
+} else {
+  $next_url = 'http://www.districtdispatch.org/2012/07/ask-your-senators-to-support-privacy-amendments-in-cybersecurity-bill/';
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Stop Cyber Spying</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
-    <link rel="stylesheet" href="css/widget.css" />
-    <link rel="image_src" href="images/icon.jpg" />
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/char_count.js"></script>
-    <script src="js/cyberspying.js"></script>
-    <script src="js/sidebars.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/embed.css" />
+    <link rel="image_src" href="/images/icon.jpg" />
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script src="/js/char_count.js"></script>
+    <script src="/js/cyberspying.js"></script>
   </head>
 
   <body>
     <div id="wrapper">
       <div id="header">
-        <img src="images/header.jpg" />
+        <img src="/images/header.jpg" />
         <h1 class="hidden">Stop Cyber Spying</h1>
         <p>The Senate is about to vote on the Cybersecurity Act of 2012,<br/><span class="details">which would let companies like Facebook and Google monitor our online communications and then pass that data to the government without a warrant.<br/>Here's what we have to do to defend privacy:</span></p>
       </div>
 
       <noscript>Total respect of course, but JavaScript is required for this action to work.</noscript>
-      <input type="hidden" id="next-url" value="http://www.districtdispatch.org/2012/07/ask-your-senators-to-support-privacy-amendments-in-cybersecurity-bill/" />
+      <input type="hidden" id="next-url" value="<?php echo($next_url); ?>" />
+
       <div id="content">
         <div id="step-lookup">
           <ol id="demands">
@@ -33,7 +39,7 @@
           <div id="lookup-wrapper">
             <div id="lookup-loading">
               Commencing Senatorial Twitter Handle Detection
-              <img src="images/loading.gif" /> 
+              <img src="/images/loading.gif" /> 
             </div>
             <form id="lookup-form">
             <p><strong>Use our interactive tool to Tweet at your US Senators.</strong> Show them all the unnecessary personal info this cyber spying bill will collect on everyday Internet users.</p>
@@ -45,7 +51,7 @@
               <input type="submit" value="FIND MY REPS" id="lookup" />
               <div id="lookup-links">
                 <p><a id="no-zip-code">I don't have a US zip code</a></p>
-                <p><a href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444">I'm not on Twitter</a></p>
+                <p><a href="<?php echo($next_url); ?>">I'm not on Twitter</a></p>
               </div>
             </div>
             </form>
@@ -61,43 +67,15 @@
             <div id="tweet-links">
               <input id="suggest-a-tweet" value="SUGGEST A TWEET FOR ME" />
               <a id="back-to-lookup">Look up a different ZIP code</a>
-              <a target="_top" href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444">I'm not on Twitter</a>
+              <a target="_top" href="<?php echo($next_url); ?>">I'm not on Twitter</a>
             </div>
           </div>
           <div class="cleared"></div>
           <div id="reps" class="centered"></div>
           <input type="submit" value="I'M DONE TWEETING, NEXT STEP" id="done" />
         </div>
+        <div id="eff">Brought to you by <a target="_top" href="https://www.eff.org/">EFF</a></div>
       </div>
-
-      <div id="twitter-badge">
-        <div id="twitter-opt-in" class="twtr-widget">
-          <div style="width: 230px;" class="twtr-doc"><div class="twtr-hd"><h4>Live Tweets from the Campaign to Defend Online Privacy</h4></div><div class="twtr-bd"><div class="twtr-timeline"><div class="twtr-tweets"><div class="twtr-reference-tweet"></div><div id="tweet-id-1" class="twtr-tweet"><div class="twtr-tweet-wrap" style="background-color:#eae2df;">
-            <p id="twitter-opt-in-show">Click here to show me the Tweets!</p>
-            <p id="twitter-opt-in-details">You'll get some data from Twitter (like a cookie) and Twitter will get some data from you (like the fact  that you saw these tweets).</p>
-          </div></div></div></div></div><div class="twtr-ft"><p>&nbsp;</p></div></div>
-        </div>
-      </div>
-
-      <div id="post-content">
-        <p><em><small>This is our last chance to stop them. Join EFF, the American Library Association, Fight for the Future, Demand Progress and others in calling on the Senate to stand up for privacy. Tell your Senators to support the Franken-Paul Amendment and other amendments to support privacy, reject anti-privacy proposals, and oppose the Cybersecurity Act as a whole.</small></em></p>
-      </div>
-
-      <div id="video">
-        <video controls>
-          <source src="https://www.eff.org/files/cyber2012.mp4" type="video/mp4" />
-          <source src="https://www.eff.org/files/cyber2012.webm" type="video/webm" />
-          <source src="https://www.eff.org/files/cyber2012.ogv" type="video/ogg" />
-          <p>Your browser doesn't support HTML5 video</p>
-        </video>
-        <p><a target="_blank" href="https://www.youtube.com/watch?v=8o0lRyGK2bU">Watch it on YouTube instead</a></p>
-      </div>
-
     </div>
-    
-    <div id="logos"></div>
-    
-    <noscript><img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;action_name=Stop Cyber Spying" style="border:0" alt="" /></noscript>
-    <div id="anon-stats"></div><script>document.getElementById('anon-stats').innerHTML = '<img src="https://anon-stats.eff.org/piwik.php?idsite=2&amp;rec=1&amp;urlref='+document.referrer+'&amp;action_name=Stop Cyber Spying" style="border:0" alt="" />';</script>
   </body>
 </html>
