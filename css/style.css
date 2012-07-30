@@ -31,7 +31,7 @@ padding: 0 40px;
 font-size: 0.8em;
 color: #222222;
 }
-#content, #post-content {
+#content {
 padding: 0 40px;
 line-height: 130%;
 }
@@ -298,5 +298,12 @@ vertical-align: middle;
 }
 #video {
 text-align: center;
-padding: 2em 0;
+padding: 1em;
+}
+#embed {
+text-align: center;
+padding: 1em;
+}
+#embed textarea {
+width: 100%;
 }
