@@ -1,6 +1,6 @@
 $(function(){
     // build logos
-    var logos = ['eff', 'ala', 'cippic', 'competitive_enterprise', 'demand_progress', 'democrats', 'fftf', 'freepress', 'liberty_coalition', 'open_congress', 'ppf', 'privacy_camp', 'prc', 'reporters_without_borders', 'techdirt'];
+    var logos = ['eff', 'ala', 'bordc', 'cdt', 'cippic', 'competitive_enterprise', 'demand_progress', 'democrats', 'fftf', 'freepress', 'liberty_coalition', 'open_congress', 'ppf', 'privacy_camp', 'prc', 'reporters_without_borders', 'techdirt'];
     $.each(logos, function(){
         var logo_id = this;
         $logo = $('<img src="images/logos/'+logo_id+'.jpg">')
