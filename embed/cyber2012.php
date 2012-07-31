@@ -31,11 +31,6 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
 
       <div id="content">
         <div id="step-lookup">
-          <ol id="demands">
-            <li><strong>Amend the bill to put in stronger safeguards for privacy.</strong> <span class="details">The <strong>Franken-Paul amendment</strong> would ensure that companies do not have new, overbroad authority to monitor and even block our private communications.</span></li>
-            <li><strong>Stop attempts to remove the privacy protections.</strong> <span class="details">Anti-privacy Senators are pushing an agenda that could undo months of effort by handing the reins of America's cybersecurity systems to <strong>military intelligence agencies like the National Security Agency</strong>&mdash;the very agency responsible for the warrantless wiretapping program instituted under the Bush administration.</span></li>
-            <li><strong>Keep opposing the bill.</strong></li>
-          </ol>
           <div id="lookup-wrapper">
             <div id="lookup-loading">
               Commencing Senatorial Twitter Handle Detection
