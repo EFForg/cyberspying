@@ -1,6 +1,6 @@
 <?php 
 if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?:\/\//', $_GET['next_url'])) {
-  $next_url = $_GET['next_url'];
+  $next_url = htmlspecialchars($_GET['next_url'], ENT_QUOTES, 'UTF-8');
 } else {
   $next_url = 'http://www.districtdispatch.org/2012/07/ask-your-senators-to-support-privacy-amendments-in-cybersecurity-bill/';
 }
