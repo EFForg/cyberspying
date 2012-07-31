@@ -127,7 +127,7 @@ $(function(){
     $('#tweet-body').charCount({ allowed: length });
 
     // clear out the tweet body
-    $('#tweet-body').val('I post in online political forums').change().focus();
+    $('#tweet-body').val('I send my Mom lolcat pictures').change().focus();
 
     // display the reps
     $('#step-tweet #reps').html($reps_html);
