@@ -296,6 +296,11 @@ background-color: #d6312b;
 border: 0;
 vertical-align: middle;
 }
+#done-details {
+margin: 0;
+color: #ffffff;
+text-shadow: 1px 1px #666666;
+}
 #video {
 text-align: center;
 padding: 1em;
