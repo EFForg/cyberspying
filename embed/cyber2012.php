@@ -23,7 +23,7 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
       <div id="header">
         <img src="/images/header.jpg" />
         <h1 class="hidden">Stop Cyber Spying</h1>
-        <p>The Senate is about to vote on the Cybersecurity Act of 2012,<br/><span class="details">which would let companies like Facebook and Google monitor our online communications and then pass that data to the government without a warrant.<br/>Here's what we have to do to defend privacy:</span></p>
+        <p>The Senate is about to vote on the Cybersecurity Act of 2012,<br/><span class="details">which would let companies like Facebook and Google monitor our online communications and then pass that data to the government without a warrant.</span></p>
       </div>
 
       <noscript>Total respect of course, but JavaScript is required for this action to work.</noscript>
