@@ -4,6 +4,7 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
 } else {
   $next_url = 'http://www.districtdispatch.org/2012/07/ask-your-senators-to-support-privacy-amendments-in-cybersecurity-bill/';
 }
+$small = isset($_GET['width']) ? TRUE : FALSE;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -12,6 +13,9 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/embed.css" />
+    <?php if ($small): ?>
+      <link rel="stylesheet" href="/css/small.css" />
+    <?php endif; ?>
     <link rel="image_src" href="/images/icon.jpg" />
     <script src="/js/jquery-1.7.2.min.js"></script>
     <script src="/js/char_count.js"></script>
@@ -21,7 +25,11 @@ if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?
   <body>
     <div id="wrapper">
       <div id="header">
-        <img src="/images/header.jpg" />
+        <?php if ($small): ?>
+          <img src="/images/header-small.jpg" />
+        <?php else: ?>
+          <img src="/images/header.jpg" />
+        <?php endif; ?>
         <h1 class="hidden">Stop Cyber Spying</h1>
         <p>The Senate is about to vote on the Cybersecurity Act of 2012,<br/><span class="details">which would let companies like Facebook and Google monitor our online communications and then pass that data to the government without a warrant.</span></p>
       </div>

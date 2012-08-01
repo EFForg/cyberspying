@@ -20,6 +20,9 @@ $(function(){
 
   // build a tweet box
   function build_tweet(twitter_id, agency) {
+    if ($('#wrapper').width() < 720) {
+      $('#header p').hide();
+    }
     $tweet = $('<form class="tweet" method="GET" target="_blank" action="https://twitter.com/home"></form>')
       .data('twitter_id', twitter_id)
       .data('agency', agency)

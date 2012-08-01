@@ -1,0 +1,21 @@
+#wrapper {
+  width: 500px;
+}
+#tweet-body {
+  width: 350px;
+}
+form.tweet {
+  width: 400px;
+}
+form.tweet .twitter-status {
+  width: 400px;
+}
+#tweet-body-wrapper {
+  width: 400px;
+}
+form.tweet .twitter-tweet {
+  margin-left: 306px;
+}
+#step-tweet #tweet-title {
+  font-size: 1.2em;
+}
