@@ -7,11 +7,12 @@
 
 body { 
   background-image: url(/images/bg.png); 
-  font: 12px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font: 15px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   margin: 0; 
   padding: 0; 
   color: #ffffff;
   background-color: #2e2e2e;
+  text-align: center;
 }
 
 .hidden { 
@@ -39,7 +40,43 @@ body {
   margin: 0 auto;
 }
 
+#content {
+  padding: 20px;
+}
+
+a:link.tweet, a:visited.tweet {
+  display: block;
+  background-image: url('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-color: #DCEAEF;
+  background-size: 30px 30px;
+  padding: 5px 5px 5px 40px;
+  font-size: 13px;
+  color: #0062A0;
+  margin-bottom: 20px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+a:hover.tweet, a:active.tweet {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#suggest {
+  color: #21E18D;
+  cursor: pointer;
+  text-align: center;
+}
+
 @media (min-width: 480px) {
+  body {
+    font: 20px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  }
+
   #header img {
     width: 240px;
     vertical-align: middle;
@@ -48,6 +85,17 @@ body {
     display: inline-block;
     vertical-align: -40px;
     font-size: 45px;
+  }
+
+  a:link.tweet, a:visited.tweet {
+    background-size: 60px 60px;
+    padding: 15px 15px 15px 80px;
+    font-size: 17px;
+    min-height: 30px;
+  }
+
+  #suggest {
+    font-weight: bold;
   }
 }
 
@@ -60,6 +108,11 @@ body {
     display: inline-block;
     vertical-align: -68px;
     font-size: 80px;
+  }
+
+  #content {
+    max-width: 768px;
+    margin: 0 auto;
   }
 }
 
