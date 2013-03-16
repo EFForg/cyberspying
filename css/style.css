@@ -1,8 +1,17 @@
+@font-face {
+font-family: 'Russo One';
+font-style: normal;
+font-weight: 400;
+src: local('Russo One'), local('RussoOne-Regular'), url(../images/russo_one.woff) format('woff');
+}
+
 body {
 background-color: black;
 color: white;
 font-family: helvetica;
 margin: 0;
+background-image: url('/images/bg.png');
+color: #ffffff;
 }
 noscript {
 font-size: 25px;
@@ -13,23 +22,26 @@ display: block;
 text-align: center;
 }
 #wrapper {
-width: 720px;
+width: 1000px;
 margin: 0 auto;
-background-image: url('/images/background.jpg');
-color: black;
+}
+.hidden {
+display: none;
 }
 #header {
-margin-bottom: 20px;
+text-align: center;
 }
-#header p {
-text-align:center;
-font-weight:bold;
-font-size: 1.2em;
-padding: 0 40px;
+#header img {
+vertical-align: middle;
 }
-#header p .details {
-font-size: 0.8em;
-color: #222222;
+#header h1 {
+display: inline-block;
+font-family: 'Russo One';
+font-weight: normal;
+vertical-align: -88px;
+font-size: 85px;
+margin: 0;
+line-height: 100%;
 }
 #content {
 padding: 0 40px;
