@@ -47,4 +47,17 @@ $(function(){
   $('#twitter-opt-in').click(function(){
     $('#twitter-badge').html('<iframe src="badge.html"></iframe>');
   });
+
+  // embed
+  function embed_code(width, height) {
+    $('#embed pre').html('&lt;iframe src="https://cyberspying.eff.org/embed/2013-cispa/" style="border: 0; width: '+width+'px; height: '+height+'px;"&gt;&lt;/iframe&gt;');
+  }
+  $('.embed-size').click(function(){
+    $('.embed-size').removeClass('active');
+    $(this).addClass('active');
+    var size = $(this).attr('id').split('-')[1].split('x');
+    embed_code(size[0], size[1]);
+  });
+  $('#embed-500x500').click();
+
 });

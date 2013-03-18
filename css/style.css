@@ -117,6 +117,33 @@ a:hover.tweet, a:active.tweet {
   padding: 10px;
 }
 
+#embed {
+  padding: 10px 10px 0 10px;
+}
+#embed pre {
+  overflow: auto;
+  max-width: 100%;
+  background-color: #000000;
+  color: #00cc00;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.embed-size {
+  background-color: #222222;
+  color: #999999;
+  font-size: 0.8em;
+  padding: 3px 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.embed-size.active {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
 @media (min-width: 480px) {
   body {
     font: 20px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -157,6 +184,10 @@ a:hover.tweet, a:active.tweet {
 
   #content {
     max-width: 768px;
+    margin: 0 auto;
+  }
+  #embed pre {
+    width: 786px;
     margin: 0 auto;
   }
 }

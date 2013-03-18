@@ -41,7 +41,7 @@ body {
 }
 
 #content {
-  padding: 20px;
+  padding: 0 10px;
 }
 
 a:link.tweet, a:visited.tweet {
@@ -70,6 +70,7 @@ a:hover.tweet, a:active.tweet {
   color: #21E18D;
   cursor: pointer;
   text-align: center;
+  margin-bottom: 0;
 }
 
 #twitter-badge {
@@ -119,7 +120,7 @@ a:hover.tweet, a:active.tweet {
 
 @media (min-width: 480px) {
   body {
-    font: 20px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font: 16px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   }
 
   #header img {
@@ -135,7 +136,7 @@ a:hover.tweet, a:active.tweet {
   a:link.tweet, a:visited.tweet {
     background-size: 60px 60px;
     padding: 15px 15px 15px 80px;
-    font-size: 17px;
+    font-size: 15px;
     min-height: 30px;
   }
 
