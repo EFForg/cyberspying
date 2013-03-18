@@ -60,4 +60,14 @@ $(function(){
   });
   $('#embed-500x500').click();
 
+  // next step
+  // if coming from action, next step is EFF donate
+  if(document.location.hash == '#action') {
+    $('#next-step').html('<p>Done tweeting? <a href="https://supporters.eff.org/donate/thanks-opposing-cispa">Defend privacy by supporting EFF</a>.</p>');
+  }
+  // otherwise next step is action
+  else {
+    $('#next-step').html('<p>Done tweeting? <a href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=9048">Tell Congress to defend privacy</a>.<br/>Not in the United States? <a href="https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=9137">Take action here instead</a>.</p>');
+  }
+
 });

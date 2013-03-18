@@ -70,6 +70,7 @@ a:hover.tweet, a:active.tweet {
   color: #21E18D;
   cursor: pointer;
   text-align: center;
+  font-family: 'Russo One';
 }
 
 #twitter-badge {
@@ -104,6 +105,16 @@ a:hover.tweet, a:active.tweet {
   line-height: 150%;
 }
 
+#next-step p {
+  font-family: 'Russo One';
+  padding: 0 20px;
+  font-size: 14px;
+}
+#next-step a {
+  color: #21E18D;
+  text-decoration: none;
+}
+
 #footer {
   text-align: center;
   margin: 50px 0 0 0;
@@ -118,8 +129,9 @@ a:hover.tweet, a:active.tweet {
   padding: 5px;
 }
 
-#embed {
-  padding: 10px 10px 0 10px;
+#embed p {
+  font-family: 'Russo One';
+  font-size: 14px;
 }
 #embed pre {
   overflow: auto;
@@ -165,10 +177,6 @@ a:hover.tweet, a:active.tweet {
     padding: 15px 15px 15px 80px;
     font-size: 17px;
     min-height: 30px;
-  }
-
-  #suggest {
-    font-weight: bold;
   }
 }
 
