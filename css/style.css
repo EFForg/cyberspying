@@ -77,8 +77,8 @@ a:hover.tweet, a:active.tweet {
   height: 500px;
   max-height: 100%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
   display: none;
 }
 #twitter-badge iframe {
@@ -148,7 +148,7 @@ a:hover.tweet, a:active.tweet {
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1230px) {
   #twitter-badge {
     display: block;
   }
