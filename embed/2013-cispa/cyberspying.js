@@ -17,15 +17,15 @@ $(function(){
 
   // random tweets
   var rep_tweets = [
-    'Oppose CISPA, @[[twitter_name]]! Preserve privacy and liberty on the Internet. https://eff.org/CISPA #CISPAAlert',
-    'Hey @[[twitter_name]]: CISPA sacrifices liberty without improving security.  We deserve both. https://eff.org/CISPA #CISPAAlert',
-    'Hey @[[twitter_name]]: We can\'t have security without privacy. Help us defend the Internet from CISPA! https://eff.org/CISPA #CISPAAlert',
-    'Hey @[[twitter_name]], a free and open internet depends on more privacy, but CISPA gives us less. Vote no! https://eff.org/CISPA #CISPAAlert',
-    'Hey @[[twitter_name]]: CISPA allows our information to go to agencies who don\'t care about our privacy. https://eff.org/CISPA #CISPAAlert',
+    'Oppose CISPA, @[[twitter_name]]! Preserve privacy and liberty on the Internet. https://eff.org/CISPA #CISPAalert',
+    'Hey @[[twitter_name]]: CISPA sacrifices liberty without improving security.  We deserve both. https://eff.org/CISPA #CISPAalert',
+    'Hey @[[twitter_name]]: We can\'t have security without privacy. Help us defend the Internet from CISPA! https://eff.org/CISPA #CISPAalert',
+    'Hey @[[twitter_name]], a free and open internet depends on more privacy, but CISPA gives us less. Vote no! https://eff.org/CISPA #CISPAalert',
+    'Hey @[[twitter_name]]: CISPA allows our information to go to agencies who don\'t care about our privacy. https://eff.org/CISPA #CISPAalert',
   ];
   var leader_tweets = [
-    'Hey @RepMikeRogers @Call_Me_Dutch: CISPA sacrifices liberty without improving security. We deserve both. https://eff.org/CISPA #CISPAAlert', 
-    'Hey @Call_Me_Dutch @RepMikeRogers: For an open internet, we need more privacy, but CISPA gives us less. https://eff.org/CISPA #CISPAAlert'
+    'Hey @RepMikeRogers @Call_Me_Dutch: CISPA sacrifices liberty without improving security. We deserve both. https://eff.org/CISPA #CISPAalert', 
+    'Hey @Call_Me_Dutch @RepMikeRogers: For an open internet, we need more privacy, but CISPA gives us less. https://eff.org/CISPA #CISPAalert'
   ];
 
   function random_tweet() {
