@@ -2,11 +2,11 @@
   font-family: 'Russo One';
   font-style: normal;
   font-weight: 400;
-  src: local('Russo One'), local('RussoOne-Regular'), url(/images/russo_one.woff) format('woff');
+  src: local('Russo One'), local('RussoOne-Regular'), url(russo_one.woff) format('woff');
 }
 
 body { 
-  background-image: url(/images/bg.png); 
+  background-image: url(bg.png); 
   font: 15px/1.33 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   margin: 0; 
   padding: 0; 
@@ -46,7 +46,7 @@ body {
 
 a:link.tweet, a:visited.tweet {
   display: block;
-  background-image: url('/images/twitter.png');
+  background-image: url('twitter.png');
   background-repeat: no-repeat;
   background-position: 10px 10px;
   background-color: #DCEAEF;
