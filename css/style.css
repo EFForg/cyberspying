@@ -104,17 +104,18 @@ a:hover.tweet, a:active.tweet {
   line-height: 150%;
 }
 
-#privacy {
-  text-align: right;
-  margin: 0;
+#footer {
+  text-align: center;
+  margin: 50px 0 0 0;
   padding: 0;
-}
-#privacy a {
-  color: #999999;
-  text-decoration: none;
+  color: #777777;
   font-size: 12px;
   font-family: arial;
-  padding: 10px;
+}
+#footer a {
+  color: #999999;
+  text-decoration: none;
+  padding: 5px;
 }
 
 #embed {
