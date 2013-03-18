@@ -20,7 +20,7 @@ $(function(){
     'Oppose CISPA, @[[twitter_name]]! Preserve privacy and liberty on the Internet. https://eff.org/CISPA #CISPAAlert',
     'Hey @[[twitter_name]]: CISPA sacrifices liberty without improving security.  We deserve both. https://eff.org/CISPA #CISPAAlert',
     'Hey @[[twitter_name]]: We can\'t have security without privacy. Help us defend the Internet from CISPA! https://eff.org/CISPA #CISPAAlert',
-    //'Hey @[[twitter_name]]: For a free and open internet, we need more privacy, but CISPA gives us less. Vote no! https://eff.org/CISPA #CISPAAlert'
+    'Hey @[[twitter_name]], a free and open internet depends on more privacy, but CISPA gives us less. Vote no! https://eff.org/CISPA #CISPAAlert',
     'Hey @[[twitter_name]]: CISPA allows our information to go to agencies who don\'t care about our privacy. https://eff.org/CISPA #CISPAAlert',
   ];
   var leader_tweets = [
@@ -42,4 +42,9 @@ $(function(){
   }
   $('#suggest').click(random_tweet);
   random_tweet();
+
+  // twitter badge opt-in
+  $('#twitter-opt-in').click(function(){
+    $('#twitter-badge').html('<iframe src="badge.html"></iframe>');
+  });
 });
