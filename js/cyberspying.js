@@ -63,7 +63,7 @@ $(function(){
   // next step
   // if coming from action, next step is EFF donate
   if(document.location.hash == '#action') {
-    $('#next-step').html('<p>Done tweeting? <a href="https://supporters.eff.org/donate/thanks-opposing-cispa">Defend privacy by supporting EFF</a>.</p>');
+    $('#next-step').html('<p>Done tweeting? <a href="https://supporters.eff.org/donate/thanks-opposing-cispa">Defend privacy by supporting EFF</a>.<br/><a href="https://www.facebook.com/share.php?u=https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=9048" target="_blank">Share on Facebook</a>.</p>');
   }
   // otherwise next step is action
   else {
