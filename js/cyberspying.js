@@ -1,31 +1,18 @@
 $(function(){
-  // rep twitter names
-  var committee_d= ['RepThompson', 'janschakowsky', 'jimlangevin', 'RepAdamSchiff', 'LuisGutierrez', 'jahimes', 'RepTerriSewell']
-    , committee_r= ['MacTXPress', 'ConawayTX11', 'RepPeteKing', 'RepLoBiondo', 'DevinNunes', 'RepWestmoreland', 'MicheleBachmann', 'TomRooney', 'RepJoeHeck', 'RepMikePompeo']
-    , committee = []
-    , i;
-
-  // democrats are twice as likely to get picked
-  for(i=0; i<committee_d.length; i++) {
-    committee.push(committee_d[i]);
-    committee.push(committee_d[i]);
-  }
-  // add the republicans too
-  for(i=0; i<committee_r.length; i++) {
-    committee.push(committee_r[i]);
-  }
+  // twitter names
+  var committee = ['Clyburn', 'RepBecerra', 'RepDerekKilmer', 'DennyHeck', 'MarkPocan', 'MarcVeasey', 'FilemonVela', 'petegallego', 'Castro4Congress', 'BetoORourke', 'CartwrightPA', 'JoyceBeatty', 'DanMaffeiNY', 'spmaloney', 'RepJeffries', 'RepGraceMeng', 'Michelle4NM', 'RepAnnieKuster', 'TeamSheaPorter', 'RepCheri', 'RepBillFoster', 'JoeGarcia', 'RepLoisFrankel', 'RepLowenthal', 'RepMarkTakano', 'CongressmanRuiz', 'JuliaBrownley', 'RepSwalwell', 'RepBera', 'RepHuffman', 'kyrstensinema', 'RepAnnaEshoo'];
 
   // random tweets
   var rep_tweets = [
     'Oppose CISPA, @[[twitter_name]]! Preserve privacy and liberty on the Internet. https://eff.org/CISPA #CISPAalert',
     'Hey @[[twitter_name]]: CISPA sacrifices liberty without improving security.  We deserve both. https://eff.org/CISPA #CISPAalert',
     'Hey @[[twitter_name]]: We can\'t have security without privacy. Help us defend the Internet from CISPA! https://eff.org/CISPA #CISPAalert',
-    'Hey @[[twitter_name]], a free and open internet depends on more privacy, but CISPA gives us less. Vote no! https://eff.org/CISPA #CISPAalert',
+    'Hey @[[twitter_name]], a free and open internet depends on more privacy but CISPA gives us less. Vote no! https://eff.org/CISPA #CISPAalert',
     'Hey @[[twitter_name]]: CISPA allows our information to go to agencies who don\'t care about our privacy. https://eff.org/CISPA #CISPAalert',
   ];
   var leader_tweets = [
-    'Hey @RepMikeRogers @Call_Me_Dutch: CISPA sacrifices liberty without improving security. We deserve both. https://eff.org/CISPA #CISPAalert', 
-    'Hey @Call_Me_Dutch @RepMikeRogers: For an open internet, we need more privacy, but CISPA gives us less. https://eff.org/CISPA #CISPAalert'
+    'Hey @WhipHoyer @NancyPelosi: CISPA sacrifices liberty without improving security. We deserve both. https://eff.org/CISPA #CISPAalert', 
+    'Hey @NancyPelosi @WhipHoyer: For an open internet, we need more privacy, but CISPA gives us less. https://eff.org/CISPA #CISPAalert'
   ];
 
   function random_tweet() {
