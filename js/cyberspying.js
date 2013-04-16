@@ -1,6 +1,6 @@
 $(function(){
   // twitter names
-  var committee = ['Clyburn', 'RepBecerra', 'RepDerekKilmer', 'DennyHeck', 'MarkPocan', 'MarcVeasey', 'FilemonVela', 'petegallego', 'Castro4Congress', 'BetoORourke', 'CartwrightPA', 'JoyceBeatty', 'DanMaffeiNY', 'spmaloney', 'RepJeffries', 'RepGraceMeng', 'Michelle4NM', 'RepAnnieKuster', 'TeamSheaPorter', 'RepCheri', 'RepBillFoster', 'JoeGarcia', 'RepLoisFrankel', 'RepLowenthal', 'RepMarkTakano', 'CongressmanRuiz', 'JuliaBrownley', 'RepSwalwell', 'RepBera', 'RepHuffman', 'kyrstensinema', 'RepAnnaEshoo'];
+  var committee = ['Clyburn', 'RepBecerra', 'RepDerekKilmer', 'DennyHeck', 'MarkPocan', 'MarcVeasey', 'FilemonVela', 'petegallego', 'Castro4Congress', 'BetoORourke', 'CartwrightPA', 'JoyceBeatty', 'DanMaffeiNY', 'spmaloney', 'RepJeffries', 'RepGraceMeng', 'Michelle4NM', 'RepAnnieKuster', 'TeamSheaPorter', 'RepCheri', 'RepBillFoster', 'JoeGarcia', 'RepLoisFrankel', 'RepLowenthal', 'RepMarkTakano', 'CongressmanRuiz', 'JuliaBrownley', 'RepSwalwell', 'RepBera', 'RepHuffman', 'kyrstensinema', 'RepAnnaEshoo', 'RepThompson', 'janschakowsky', 'jimlangevin', 'RepAdamSchiff', 'LuisGutierrez', 'jahimes', 'RepTerriSewell'];
 
   // random tweets
   var rep_tweets = [
