@@ -1,6 +1,6 @@
 <?php 
 if(isset($_GET['next_url']) && !empty($_GET['next_url']) && preg_match('/^https?:\/\//', $_GET['next_url'])) {
-    $next_url = $_GET['next_url'];
+    $next_url = htmlspecialchars($_GET['next_url'], ENT_QUOTES, 'UTF-8');
 } else {
     $next_url = 'https://action.eff.org/o/9042/p/dia/action/public/?action_KEY=8444';
 }
